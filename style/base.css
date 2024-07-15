@@ -1,0 +1,190 @@
+@layer base {
+    /* layer is group the code together then can collape*/
+    :root {
+      /*--- Color ----*/
+      --lime: #a4ffa2;
+      --magenta: #f47dda;
+      --magenta50: #f47dda80;
+      --white: #ffffff;
+      --tan: #cec5b4;
+      --teal: #2e6d81;
+      --cyan: #7de6f4;
+      --black: #050d14;
+      --shadow: #050d1480;
+      --gradient: linear-gradient(180deg, var(--black) 0%, var(--teal) 100%);
+      --grey: #adb0c0;
+  
+      /*----BASED----*/
+      --base-size: 1rem; 
+      --scale: 1.25; 
+      --h5: calc(var(--base-size) * var(--scale)); 
+      --h4: calc(var(--h5) * var(--scale)); 
+      --h3: calc(var(--h4) * var(--scale));
+      --h2: calc(var(--h3) * var(--scale));
+      --h1: calc(var(--h2) * var(--scale));
+      --h6: var(--base-size);
+  
+      /*----- Font -----*/
+      --sans-serif: "Poppins", sans-serif;
+      --serif: "Comorant Garamond", serif;
+      --cursive: Pacifico, cursive;
+    }
+  
+    
+    html {
+      box-sizing: border-box;
+    }
+  
+  
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+  
+    /*--set up the whole body in the page--*/
+    /* can copy from website https://typescale.com/ */
+    body {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.75;
+      background: var(--gradient) no-repeat fixed; /*no-repeat fixed; ไม่ให้สีมันทำซ้ำหลายรอบ*/
+      color: var(--white);
+      font-size: var(--base-size);
+      margin: 0;
+      padding: 0;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 3rem 0 1.38rem;
+      font-weight: 300;
+      line-height: 1.3;
+    }
+  
+    /*---series of font-size ---*/
+    /*tag h1 and all class .h1*/
+    h1,
+    .h1 {
+      font-size: var(--h1);
+    }
+  
+    h2,
+    .h2 {
+      font-size: var(--h2);
+    }
+  
+    h3,
+    .h3 {
+      font-size: var(--h3);
+    }
+  
+    h4,
+    .h4 {
+      font-size: var(--h4);
+    }
+  
+    h5,
+    .h5 {
+      font-size: var(--h5);
+    }
+  
+    h6,
+    .h6 {
+      font-size: var(--h6);
+    }
+  
+    /*---set up Link---*/
+    a {
+      color: var(--lime);
+    }
+    a:hover {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+  
+    /*---set up image --*/
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    /*---set up space between tour and first img---*/
+    main {
+      margin-bottom: 4rem;
+    }
+  
+    /*---set up suport main---*/
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+  
+    blockquote {
+      margin: 0;
+      padding: 0;
+    }
+  
+    cite {
+      font-style: normal;
+      display: block;
+      margin-top: -3px;
+    }
+    
+    .wrapper {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    
+    .button-primary  {
+      text-transform: uppercase;  
+      border: 2px solid var(--magenta); 
+      border-radius: 12px; 
+      padding: 1rem 2rem;        
+      color: var(--magenta);                 
+      font-weight: bold;
+      text-align: center; 
+      text-decoration: none;
+      display: inline-block;
+      white-space: nowrap;
+      width: 170px;
+    }
+    
+    .button-primary:hover {
+      color: var(--cyan);
+      border-color: var(--cyan);
+    }
+    
+    .button-soldout {
+      color: var(--magenta50); /*fade color*/
+      border-color: var(--magenta50);
+      background: linear-gradient(to top right, transparent calc(50% - 2px), var(--magenta50) , transparent calc(50% + 2px) );
+      /* copy from https://codepen.io/jen4web/pen/oNaYexj*/
+      pointer-events: none;
+    }
+    
+    /* use : pointer-events: none; instead 
+      .button-soldout:hover {
+      color: var(--magenta50); 
+      border-color: var(--magenta50);
+      pointer-events: none;
+    }*/
+    
+    .button-fullwidth {
+      display: block;
+      border-radius: 0; 
+      width: 100%;
+      margin: 1rem auto;
+    }
+  
+    /*---set up footer---*/
+    footer {
+      margin-top: 5rem;
+      text-transform: uppercase; /*เปลี่ยนเป็นตัวพิมพ์ใหญ่ทั้งหมด*/
+    }
+  }
+  
